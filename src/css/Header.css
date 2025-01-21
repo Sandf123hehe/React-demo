@@ -1,0 +1,52 @@
+/* Header.css */
+
+/* 整个导航栏容器 */
+.headerNav {
+  background-color: #333;
+  padding: 10px 0;
+   
+  top: 0;           /* 顶部对齐 */
+  left: 0;
+  right: 0;
+  z-index: 1000;    /* 保证导航栏在最上面 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+  font-family: Arial, sans-serif; /* 使用现代字体 */
+}
+
+/* 防止内容被导航栏遮住，给页面主体加个上边距 */
+ 
+
+/* 设置列表为横向排列 */
+.headerNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 居中排列导航项 */
+}
+
+/* 设置每个列表项的间距 */
+.headerNav li {
+  margin: 0 20px; /* 让每个导航项之间有间距 */
+}
+
+/* 设置导航链接样式 */
+.headerNav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;  /* 增加点击区域，增强用户体验 */
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 鼠标悬停时，改变背景色 */
+.headerNav a:hover {
+  background-color: #555;
+}
+
+/* 激活状态的链接样式 */
+.headerActive {
+  background-color: #ff5722; /* 激活项背景色 */
+  color: white; /* 激活项文字颜色 */
+}
