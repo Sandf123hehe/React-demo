@@ -35,6 +35,9 @@ function Home() {
                 <li className="tree-sub-li">
                   <Link to="/home/first" className="tree-link">1、快捷菜单图标按钮交互特效</Link>
                 </li>
+                <li className="tree-sub-li">
+                  <Link to="/home/fifth" className="tree-link">5、阿里云矢量图标的使用</Link>
+                </li>
               </ul>
             )}
           </li>
@@ -69,7 +72,10 @@ function Home() {
             {expanded.menu4 && (
               <ul className="tree-sub-ul">
                 <li className="tree-sub-li">
-                  <Link to="/home/fourth" className="tree-link">4、精灵图</Link>
+                  <Link to="/home/fourth" className="tree-link">1、精灵图</Link>
+                </li>
+                <li className="tree-sub-li">
+                  <Link to="/home/sixth" className="tree-link">2、图片轮播</Link>
                 </li>
               </ul>
             )}
