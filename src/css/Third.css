@@ -1,6 +1,8 @@
 .third-demo-container {
     background: linear-gradient(to top, #2c3e50, #4ca1af);
     /* 夜空渐变 */
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     /* 隐藏页面内容超出视口的部分 */
   }

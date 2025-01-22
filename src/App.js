@@ -5,7 +5,7 @@ import Header from './components/Header';
 import './App.css';  // 导入CSS文件
 function App() {
   return (
-    <div>
+    <div   className="app-container" >
       <Header className="app-header"/>
       <Routes className="app-routes"/>
     </div>

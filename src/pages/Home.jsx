@@ -86,6 +86,26 @@ function Home() {
                 <li className="tree-sub-li">
                   <Link to="/home/ninth" className="tree-link">5、图片轮播（盒子）</Link>
                 </li>
+               
+                <li className="tree-sub-li">
+                  <Link to="/home/eleventh" className="tree-link">6、带标题的图像悬停效果</Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          {/* 登录框样式 */}
+          <li className="tree-li">
+            <span onClick={() => toggleExpand('menu5')} className="tree-toggle">
+              {expanded.menu5 ? '−' : '>'} 登录框样式
+            </span>
+            {expanded.menu5 && (
+              <ul className="tree-sub-ul">
+                <li className="tree-sub-li">
+                  <Link to="/home/twelfth" className="tree-link">1、登录框</Link>
+                </li>
+                <li className="tree-sub-li">
+                  <Link to="/home/tenth" className="tree-link">2、登录（不看密码）</Link>
+                </li>
               </ul>
             )}
           </li>
