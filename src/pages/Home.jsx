@@ -72,10 +72,19 @@ function Home() {
             {expanded.menu4 && (
               <ul className="tree-sub-ul">
                 <li className="tree-sub-li">
-                  <Link to="/home/fourth" className="tree-link">1、精灵图</Link>
+                  <Link to="/home/fourth" className="tree-link">1、图片轮播（精灵图）</Link>
                 </li>
                 <li className="tree-sub-li">
-                  <Link to="/home/sixth" className="tree-link">2、图片轮播</Link>
+                  <Link to="/home/sixth" className="tree-link">2、图片轮播（滚动）</Link>
+                </li>
+                <li className="tree-sub-li">
+                  <Link to="/home/seventh" className="tree-link">3、图片轮播（B站）</Link>
+                </li>
+                <li className="tree-sub-li">
+                  <Link to="/home/eighth" className="tree-link">4、图片轮播（盒子）</Link>
+                </li>
+                <li className="tree-sub-li">
+                  <Link to="/home/ninth" className="tree-link">5、图片轮播（盒子）</Link>
                 </li>
               </ul>
             )}

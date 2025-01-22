@@ -9,6 +9,9 @@ import Third from '../components/Third';
 import Fourth from '../components/Fourth';
 import Fifth from '../components/Fifth';
 import Sixth from '../components/Sixth';
+import Seventh from '../components/Seventh';
+import Eighth from '../components/Eighth';
+import Ninth from '../components/Ninth';
 function AppRoutes() {
   return (
     <Routes>
@@ -21,6 +24,9 @@ function AppRoutes() {
         <Route path="fourth" element={<Fourth />} />
         <Route path="fifth" element={<Fifth />} />
         <Route path="sixth" element={<Sixth />} />
+        <Route path="seventh" element={<Seventh />} />
+        <Route path="eighth" element={<Eighth />} />
+        <Route path="ninth" element={<Ninth />} />
       </Route>
       <Route path="/" element={<Home />} /> {/* 默认路由 */}
     </Routes>
