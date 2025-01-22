@@ -10,3 +10,7 @@ src
   │   └── Routes.js
   ├── App.js
   └── index.js
+
+  /* #region start */
+
+/*  #endregion end */

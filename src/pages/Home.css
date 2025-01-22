@@ -1,38 +1,73 @@
+/* Home.css */
 .home-container {
-  
-  background-color: #f0f0f0;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-    
-   height: 100%;
-   margin-top: 60px;
-}
-.home-title {
-  font-size: 2rem;
-  color: #333;
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  width: 100%;
+  /* 确保容器占满全宽 */
 }
 
-.home-paragraph {
-  font-size: 1.2rem;
-  color: #666;
+.tree-view {
+  transition: width 0.3s ease;
+  /* 添加过渡效果 */
+  overflow: hidden;
+  /* 隐藏溢出内容 */
 }
 
-.home-ul {
+.tree-view.collapsed {
+  width: 15px;
+  /* 折叠状态的宽度 */
+}
+
+.tree-view.expanded {
+  width: 250px;
+  /* 展开状态的宽度 */
+}
+
+.tree-toggle {
+  cursor: pointer;
+  user-select: none;
+  /* 防止文本选中 */
+  margin: 5px;
+  /* 添加一些边距 */
+}
+
+.tree-ul {
   list-style-type: none;
-  padding-left: 20px;
+  padding: 0;
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  flex-direction: column;
+  /* 设置为上下排列 */
 }
 
-.home-li {
+.tree-li {
   margin: 5px 0;
 }
 
-.home-link {
-  color: #007bff;
-  text-decoration: none;
+.tree-sub-ul {
+  list-style-type: none;
+  padding-left: 20px;
+  /* 子项缩进 */
+  display: flex;
+  /* 确保子项也使用 Flexbox */
+  flex-direction: column;
+  /* 子项上下排列 */
 }
 
-.home-link:hover {
+.tree-link {
+  text-decoration: none;
+  color: #007bff;
+  /* 链接颜色 */
+}
+
+.tree-link:hover {
   text-decoration: underline;
 }
- 
+
+.content-area {
+  flex: 1;
+  /* 让内容区域占满剩余空间 */
+  padding: 20px;
+  /* 添加内边距 */
+}
