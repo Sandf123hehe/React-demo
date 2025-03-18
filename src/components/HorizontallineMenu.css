@@ -1,0 +1,55 @@
+ 
+
+.HorizontallineMenu-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(60deg, #77a1d3, #79cbca, #e684ae);
+}
+
+.HorizontallineMenu-box {
+    display: flex;
+    flex-direction: column;
+    width: 70vmin;
+    height: 50vmin;
+    border: 1vmin solid #ffffff44;
+    border-radius: 2vmin;
+    padding: 2vmin;
+}
+
+.HorizontallineMenu-nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 4vmin;
+}
+
+.HorizontallineMenu-nav a {
+    font-size: 4vmin;
+    color: #fff;
+    text-decoration: none;
+}
+
+.HorizontallineMenu-line {
+    width: 0;
+    height: 0.5vmin;
+    background-color: #fff;
+    border-radius: 1vmin;
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+    transition: all 0.5s;
+}
+
+.HorizontallineMenu-main-box {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff44;
+    border-radius: 1vmin;
+    color: #fff;
+    font-size: 8vmin;
+    font-weight: bold;
+    letter-spacing: 1vmin;
+}    

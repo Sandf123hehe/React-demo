@@ -1,76 +1,105 @@
 /* Home.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .home-container {
   display: flex;
-   
   flex-direction: row;
   width: 100%;
-  /* height: 100vh; */
-  height: calc(100vh - 60px);
-  background-color: rgb(245, 247, 246);
-  /* 确保容器占满全宽 */
+  height: 100vh;
+  background-color: #f4f6f8;
+  padding: 0;
+   
 }
 
 .tree-view {
+  position: relative;
   transition: width 0.3s ease;
-  /* 添加过渡效果 */
   overflow: hidden;
-  /* 隐藏溢出内容 */
-}
-
-.tree-view.collapsed {
-  width: 15px;
-  /* 折叠状态的宽度 */
+  background-color: #333;
+  color: white;
+  padding: 0;
 }
 
 .tree-view.expanded {
   width: 250px;
-  /* 展开状态的宽度 */
 }
 
-.tree-toggle {
+.tree-view.collapsed {
+  width: 0;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #333;
+  border: none;
+  color: white;
+  font-size: 20px;
   cursor: pointer;
-  user-select: none;
-  /* 防止文本选中 */
-  margin: 5px;
-  /* 添加一些边距 */
+  width: 25px;
+  height: 40px;
+  z-index: 10;
+  border-radius: 0 4px 4px 0;
 }
 
 .tree-ul {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  /* 使用 Flexbox 布局 */
-  flex-direction: column;
-  /* 设置为上下排列 */
+  margin-top: 0;
 }
 
 .tree-li {
-  margin: 5px 0;
+  margin: 0;
+}
+
+.tree-toggle {
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  background-color: #444;
+  transition: background-color 0.2s ease;
+}
+
+.tree-toggle:hover {
+  background-color: #555;
 }
 
 .tree-sub-ul {
   list-style-type: none;
   padding-left: 20px;
-  /* 子项缩进 */
-  display: flex;
-  /* 确保子项也使用 Flexbox */
-  flex-direction: column;
-  /* 子项上下排列 */
+  margin: 0;
+  background-color: #555;
 }
 
 .tree-link {
   text-decoration: none;
-  color: #007bff;
-  /* 链接颜色 */
+  color: white;
+  padding: 8px 15px;
+  display: block;
+  transition: background-color 0.2s ease;
 }
 
 .tree-link:hover {
-  text-decoration: underline;
+  background-color: #666;
 }
 
 .content-area {
   flex: 1;
-  /* 让内容区域占满剩余空间 */
-  padding: 10px;
-  /* 添加内边距 */
+  padding: 0px;
+  background-color: white;
+}    
+.tree-toggle-icon {
+  width: 2em;
+  height: 2em;
+  vertical-align: -0.15em;
+  fill: white;
+  overflow: hidden;
 }

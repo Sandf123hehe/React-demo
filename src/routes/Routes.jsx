@@ -15,6 +15,17 @@ import Ninth from '../components/Ninth';
 import Tenth from '../components/login/Tenth';
 import Eleventh from '../components/Eleventh';
 import Twelfth from '../components/login/Twelfth';
+import Thirteen from '../components/Thirteen';//大红灯笼
+import GlowingBlocks from '../components/GlowingBlocks';//发光方块
+import LikeThree from '../components/LikeThree';//点赞三联
+import NewMimicLoads from '../components/NewMimicLoads';//新拟态加载
+import FlowingWaterBorders from '../components/FlowingWaterBorders';//流水灯边框
+import SnowballRolling from '../components/SnowballRolling';//雪球滚动
+import SplitTheInfocard from '../components/SplitTheInfocard';//拆分图文卡片
+import StaringAtYou from '../components/StaringAtYou';//盯着你
+import RotateTextInLoop from '../components/RotateTextInLoop';//环形旋转文字
+import LEDClock from '../components/LEDClock';//LED时钟
+import HorizontallineMenu from '../components/HorizontallineMenu';
 function AppRoutes() {
   return (
     <Routes>
@@ -35,7 +46,18 @@ function AppRoutes() {
         <Route path="tenth" element={<Tenth />} />
         <Route path="eleventh" element={<Eleventh />} />
         <Route path="twelfth" element={<Twelfth />} />
-
+        <Route path="thirteen" element={<Thirteen />} />
+        {/* Soap bubbles */}
+        <Route path="glowingblocks" element={<GlowingBlocks />} />
+        <Route path="likethree" element={<LikeThree />} /> 
+        <Route path="newmimicloads" element={<NewMimicLoads />} />  
+        <Route path="flowingwaterborders" element={<FlowingWaterBorders />} />  
+        <Route path="snowballrolling" element={<SnowballRolling />} />
+        <Route path="splittheInfocard" element={<SplitTheInfocard />} />
+        <Route path="staringatyou" element={<StaringAtYou />} />
+        <Route path="rotatetextInloop" element={<RotateTextInLoop />} />
+        <Route path="ledclock" element={<LEDClock />} /> 
+        <Route path="horizontallinemenu" element={<HorizontallineMenu />} />  
       </Route>
       <Route path="/" element={<Home />} /> {/* 默认路由 */}
     </Routes>

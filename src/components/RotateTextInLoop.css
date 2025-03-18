@@ -1,0 +1,58 @@
+/* RotateTextInLoop.css */
+.RotatetextInloop-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .RotatetextInloop-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: #eee;
+  }
+  
+  .RotatetextInloop-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vmin;
+    height: 60vmin;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .RotatetextInloop-logo {
+    width: 70%;
+    height: 70%;
+    background: url(./image/logo.svg);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .RotatetextInloop-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: RotatetextInloop-animate 20s linear infinite;
+  }
+  
+  @keyframes RotatetextInloop-animate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  .RotatetextInloop-text span {
+    font-size: 4vmin;
+    transform-origin: 0 30vmin;
+    position: absolute;
+    left: 50%;
+  }

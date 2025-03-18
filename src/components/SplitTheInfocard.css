@@ -1,0 +1,97 @@
+
+.SplittheInfocard-box-container {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background: linear-gradient(10deg, #0d9545, #45b9dd);
+}
+
+.SplittheInfocard-box {
+    display: flex;
+    gap: 5vmin;
+}
+
+.SplittheInfocard-card {
+    width: 30vmin;
+    aspect-ratio: 3/4;
+    border-radius: 1vmin;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 5vmin 6vmin -8vmin,
+        var(--color) 0 4.5vmin 5vmin -6vmin,
+        rgba(50, 50, 50, 0.5) 0 4vmin 8vmin -2vmin,
+        rgba(0, 0, 0, 0.8) 0 4vmin 5vmin -3vmin;
+    overflow: hidden;
+    position: relative;
+}
+
+.SplittheInfocard-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.SplittheInfocard-card:hover img {
+    transform: scale(1.1);
+}
+
+.SplittheInfocard-card::before,
+.SplittheInfocard-card::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.SplittheInfocard-card::after {
+    top: 50%;
+    transition-delay: 0.15s;
+}
+
+.SplittheInfocard-card:hover::before,
+.SplittheInfocard-card:hover::after {
+    transform: scaleX(1);
+}
+
+.SplittheInfocard-card .SplittheInfocard-text-box {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5vmin;
+    letter-spacing: 0.1vmin;
+    inset: 2vmin;
+    position: absolute;
+    top: auto;
+    z-index: 2;
+}
+
+.SplittheInfocard-card .SplittheInfocard-text-box h2,
+.SplittheInfocard-card .SplittheInfocard-text-box p {
+    color: var(--color);
+    opacity: 0;
+    transform: translateY(10vmin);
+    transition: all 0.8s, color 3s;
+}
+
+.SplittheInfocard-card .SplittheInfocard-text-box h2 {
+    font-size: 6vmin;
+    font-weight: bold;
+    margin-bottom: 1vmin;
+}
+
+.SplittheInfocard-card .SplittheInfocard-text-box p {
+    transition-delay: 0.15s;
+}
+
+.SplittheInfocard-card:hover .SplittheInfocard-text-box h2,
+.SplittheInfocard-card:hover .SplittheInfocard-text-box p {
+    color: inherit;
+    opacity: 1;
+    transform: translateY(0);
+}
+    

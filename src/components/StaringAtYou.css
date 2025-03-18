@@ -1,0 +1,39 @@
+ 
+
+.Staringatyou-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#33bbff, #1144ff);
+}
+
+.Staringatyou-box {
+    display: flex;
+    gap: 4vmin;
+}
+
+.Staringatyou-box .Staringatyou-eye {
+    width: 20vmin;
+    height: 20vmin;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 4vmin rgba(0, 0, 0, 0.2), inset 0 0 2vmin #33bbff,
+        inset 0 0 4vmin #33bbff;
+    position: relative;
+}
+
+.Staringatyou-box .Staringatyou-eye::before {
+    content: "";
+    width: 40%;
+    height: 40%;
+    background-color: #333;
+    border-radius: 50%;
+    border: 1vmin solid #33bbff;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+    
