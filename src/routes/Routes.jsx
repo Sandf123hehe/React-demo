@@ -26,6 +26,7 @@ import StaringAtYou from '../components/StaringAtYou';//盯着你
 import RotateTextInLoop from '../components/RotateTextInLoop';//环形旋转文字
 import LEDClock from '../components/LEDClock';//LED时钟
 import HorizontallineMenu from '../components/HorizontallineMenu';
+import CardFlipsClock from '../components/CardFlipsClock'; //卡片时钟
 function AppRoutes() {
   return (
     <Routes>
@@ -58,6 +59,8 @@ function AppRoutes() {
         <Route path="rotatetextInloop" element={<RotateTextInLoop />} />
         <Route path="ledclock" element={<LEDClock />} /> 
         <Route path="horizontallinemenu" element={<HorizontallineMenu />} />  
+
+        <Route path="cardflipsclock" element={<CardFlipsClock />} />  
       </Route>
       <Route path="/" element={<Home />} /> {/* 默认路由 */}
     </Routes>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from'react';
+import React, { useEffect, useRef } from 'react';
 import './LEDClock.css';
 
 const LEDClock = () => {
@@ -16,6 +16,7 @@ const LEDClock = () => {
     ];
 
     const numbersEls = useRef([]);
+    const intervalRef = useRef(null); // 使用useRef来保存interval
 
     const getTimeNumbers = () => {
         const time = new Date();
@@ -37,7 +38,7 @@ const LEDClock = () => {
             const numberEl = numbersEls.current[timeNumberIndex]?.children;
             if (numberEl) {
                 Array.from(numberEl).forEach((ledEl, ledIndex) => {
-                    ledEl.className = numbers[timeNumber][ledIndex]? 'LEDClock-active' : '';
+                    ledEl.className = numbers[timeNumber][ledIndex] ? 'LEDClock-active' : '';
                 });
             }
         });
@@ -45,8 +46,13 @@ const LEDClock = () => {
 
     useEffect(() => {
         timeFun();
-        const interval = setInterval(timeFun, 1000);
-        return () => clearInterval(interval);
+        intervalRef.current = setInterval(timeFun, 1000); // 保存interval到ref
+        
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current); // 清除interval
+            }
+        };
     }, []);
 
     return (

@@ -111,11 +111,7 @@ function Home() {
             {/* 未分类的 */}
             <li className="tree-li">
               <span onClick={() => toggleExpand('menu6')} className="tree-toggle">
-                {expanded.menu6 ? <svg className="tree-toggle-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-jiantou_liebiaozhankai"/>
-                </svg> : <svg className="tree-toggle-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-jiantou_liebiaoshouqi"/>
-                </svg>}
+                {expanded.menu6 ? '−' : '>'} 
                 未分类样式
               </span>
               {expanded.menu6 && (
@@ -152,6 +148,9 @@ function Home() {
                   </li>
                   <li className="tree-sub-li">
                     <Link to="/home/horizontallinemenu" className="tree-link">12、小横线菜单</Link>
+                  </li>
+                  <li className="tree-sub-li">
+                    <Link to="/home/cardflipsclock" className="tree-link">13、卡片时钟</Link>
                   </li>
                 </ul>
               )}
